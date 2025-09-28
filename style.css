@@ -79,3 +79,9 @@ button {
     visibility: visible;
     opacity: 1;
 }
+.made {
+  text-align: center;
+  font-size: 12px;
+  transform: translateY(-20px);
+  color: #a5a0a0;
+}
