@@ -36,12 +36,13 @@ convert.onclick = function () {
 
 reset.onclick = function () {
   let userInput = document.querySelector(".user-input");
-  res.style.display = "none";
+  let bou = document.querySelector(".bou");
+  bou.style.display = "none";
   userInput.value = "";
 };
 
 copy.onclick = function () {
-  let res = document.getElementById("res").innerText;
+  let res = document.querySelector(".res").innerText;
   navigator.clipboard.writeText(res);
   let popup = document.getElementById("popup");
   popup.classList.add("show");
