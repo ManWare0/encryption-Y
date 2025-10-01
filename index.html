@@ -3,33 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encryption-U</title>
+    <title>Encryption-U | Secure Text Encryption</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
+    <!-- Animated background particles -->
+    <div class="particles-container">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
     <div class="main">
       <div class="container">
-        <h1>Welcome To Encryption-U</h1>
-
-        <p class="t-enter">Please enter the text</p>
-        <textarea id="inputs" class="user-input">aselfjkasb</textarea>
-        <div class="bou">
-          <div id="up">
-            <h4 class="result">Result :</h4>
-            <p class="res">
-              
-            </p>
+        <header class="header">
+          <div class="logo">
+            <i class="fas fa-shield-alt"></i>
+            <h1>Encryption-U</h1>
           </div>
-          <button class="copy">copy</button>
-        </div>
-        <button class="convert">Convert</button>
-        <button class="reset">Reset</button>
+          <p class="subtitle">Secure Text Encryption Tool</p>
+        </header>
+
+        <main class="content">
+          <div class="input-section">
+            <label for="inputs" class="input-label">
+              <i class="fas fa-key"></i>
+              Enter your text to encrypt
+            </label>
+            <div class="textarea-container">
+              <textarea 
+                id="inputs" 
+                class="user-input" 
+                placeholder="Type your message here..."
+                rows="4"
+              ></textarea>
+              <div class="char-counter">
+                <span class="char-count">0</span> characters
+              </div>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button class="convert" id="convertBtn">
+              <i class="fas fa-lock"></i>
+              <span>Encrypt</span>
+              <div class="loading-spinner"></div>
+            </button>
+            <button class="reset" id="resetBtn">
+              <i class="fas fa-undo"></i>
+              <span>Reset</span>
+            </button>
+          </div>
+
+          <div class="result-section bou" id="resultSection">
+            <div class="result-header">
+              <h4 class="result">
+                <i class="fas fa-check-circle"></i>
+                Encrypted Result
+              </h4>
+              <button class="copy" id="copyBtn">
+                <i class="fas fa-copy"></i>
+                Copy
+              </button>
+            </div>
+            <div class="result-content">
+              <p class="res" id="resultText">
+                Your encrypted text will appear here...
+              </p>
+            </div>
+          </div>
+        </main>
       </div>
-      <div class="made">Made with ManWare</div>
-      <div id="popup">Copied</div>
+
+      <footer class="footer">
+        <div class="made">
+          <i class="fas fa-heart"></i>
+          Made with love by ManWare
+        </div>
+      </footer>
+
+      <!-- Toast notification -->
+      <div id="popup" class="toast">
+        <i class="fas fa-check"></i>
+        <span>Copied to clipboard!</span>
+      </div>
+
+      <!-- Loading overlay -->
+      <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+          <div class="spinner"></div>
+          <p>Encrypting your text...</p>
+        </div>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
 </html>
-
-
